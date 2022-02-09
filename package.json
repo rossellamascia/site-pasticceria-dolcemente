@@ -1,5 +1,5 @@
 {
-  "name": "neosyn-fe-boilerplate",
+  "name": "site-pasticceria-dolcemente",
   "private": true,
   "scripts": {
     "dev": "next dev",
