@@ -1,0 +1,8 @@
+schema: ./backend-mock/schema-example.graphql
+documents: src/**/*.{graphql,tsx}
+generates:
+  ./src/apis/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo

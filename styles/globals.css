@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  a {
+    @apply text-inherit underline;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h5 {
+    @apply text-lg;
+  }
+}
+
+@layer components {
+  .input {
+    @apply block w-full rounded-[var(--input-radius,var(--global-radius))] px-[var(--input-padding-x,var(--global-padding))] py-[var(--input-padding-y,var(--global-padding))] focus:border-primary focus:ring-primary;
+
+    &.hasSuccess {
+      @apply border-success focus:ring-success;
+    }
+    &.hasWarning {
+      @apply border-warning focus:ring-warning;
+    }
+    &.hasError {
+      @apply border-danger focus:ring-danger;
+    }
+  }
+
+  /* Button styles */
+  .btn {
+    @apply rounded-[var(--button-radius,var(--global-radius))] px-[var(--button-padding-x,var(--global-padding))] py-[var(--button-padding-y,var(--global-padding))] font-bold;
+
+    &:disabled {
+      @apply cursor-not-allowed opacity-40;
+    }
+
+    &.btn-primary {
+      @apply bg-primary text-primary-fg;
+    }
+
+    &.btn-success {
+      @apply bg-success text-success-fg;
+    }
+
+    &.btn-danger {
+      @apply bg-danger text-danger-fg;
+    }
+
+    &.btn-warning {
+      @apply bg-warning text-warning-fg;
+    }
+  }
+
+  .btn-group {
+    @apply flex items-center;
+
+    .btn {
+      @apply rounded-none first:rounded-l-[var(--button-radius,var(--global-radius))] last:rounded-r-[var(--button-radius,var(--global-radius))];
+    }
+  }
+}
