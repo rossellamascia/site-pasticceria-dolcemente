@@ -1,7 +1,7 @@
 :root {
   /* colors */
-  --color-primary: #586f6b;
-  --color-primary-ligth: lighten(#586f6b, 30%);
+  --color-primary: #cfa069;
+  --color-primary-ligth: lighten(#cfa069, 30%);
   --color-success: #4cad6e;
   --color-danger: #f2686e;
   --color-warning: #ffb830;

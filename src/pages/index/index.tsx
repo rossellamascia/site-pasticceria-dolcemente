@@ -1,63 +1,94 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Hero from '../../components/Hero/Hero';
+import NavBar from '../../components/NavBar/NavBar';
 
 export const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col justify-between pt-6">
+    <>
       <Head>
-        <title>Neosyn - FE Boilerplate</title>
+        <title>Dolcemente Pasticceria - Home</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
-          name="description"
-          content="Neosyn FE boilerplate for new projects"
+          property="og:title"
+          content="Dolcemente Pasticceria - Home"
+          key="title"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Pasticceria marina di carrara"></meta>
       </Head>
-
-      <main className="text-center">
-        <h1 className="font-bold">Neosyn - FE Boilerplate</h1>
-
-        <ul className="mt-3 flex flex-col items-center space-y-2">
-          <li className="rounded-md border border-gray-700 py-2 px-3">
-            <a href="https://github.com/vercel/next.js">Next.js</a>
-          </li>
-          <li className="rounded-md border border-gray-700 py-2 px-3">
-            <a href="https://github.com/tailwindlabs/tailwindcss">
-              TailwindCSS
-            </a>
-          </li>
-          <li className="rounded-md border border-gray-700 py-2 px-3">
-            <a href="https://github.com/storybookjs/storybook">Storybook</a>
-          </li>
-          <li className="rounded-md border border-gray-700 py-2 px-3">
-            Testing stories using{' '}
-            <a href="https://github.com/facebook/jest">Jest</a>
-          </li>
-          <li className="rounded-md border border-gray-700 py-2 px-3">
-            Code formatting using{' '}
-            <a href="https://github.com/prettier/prettier">Prettier</a>
-          </li>
-          <li className="rounded-md border border-gray-700 py-2 px-3">
-            Git Hooks using{' '}
-            <a href="https://github.com/typicode/husky">Husky</a> +{' '}
-            <a href="https://github.com/okonet/lint-staged">lint-staged</a>
-          </li>
-          <li className="rounded-md border border-gray-700 py-2 px-3">
-            Mock RESTFul and GraphQL API calls inside stories using{' '}
-            <a href="https://github.com/mswjs/msw">MSW</a>
-          </li>
-        </ul>
-      </main>
-
-      <footer className="flex justify-center py-5">
-        <Image
-          src="/neosyn-logo.svg"
-          alt="logo"
-          objectFit="cover"
-          height={80}
-          width={250}
-        />
-      </footer>
-    </div>
+      <NavBar />
+      <Hero />
+      <section className="body-font h-30 bg-primary text-white">
+        <div className="container mx-auto">
+          <div className="-m-4 flex flex-wrap text-center">
+            <div className="w-full p-4 sm:w-1/2 md:w-1/4">
+              <div className="rounded-lg border-gray-200">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="text-withe mb-3 inline-block h-12 w-12"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 17l4 4 4-4m-4-5v9"></path>
+                  <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+                </svg>
+              </div>
+            </div>
+            <div className="w-full p-4 sm:w-1/2 md:w-1/4">
+              <div className="rounded-lg border-gray-200">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="mb-3 inline-block h-12 w-12 text-white"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                </svg>
+              </div>
+            </div>
+            <div className="w-full p-4 sm:w-1/2 md:w-1/4">
+              <div className="rounded-lg border-gray-200">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="mb-3 inline-block h-12 w-12 text-white"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+                  <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+                </svg>
+              </div>
+            </div>
+            <div className="w-full p-4 sm:w-1/2 md:w-1/4">
+              <div className="rounded-lg border-gray-200">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="mb-3 inline-block h-12 w-12 text-white"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
