@@ -13,7 +13,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ open, setOpen }) => (
     } drop-shadow-md filter transition-transform duration-300 ease-in-out`}
   >
     <div className="mt-6 ml-4 flex items-center bg-black drop-shadow-md filter">
-      <Logo />
+      <Logo width={200} height={29} />
     </div>
     <div className="ml-4 flex flex-col text-white">
       {menu.map(el => (
