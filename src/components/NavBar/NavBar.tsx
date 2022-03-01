@@ -5,12 +5,14 @@ import HamburgerButton from './HamburgerButton/HamburgerButton';
 import Logo from '../Logo/Logo';
 import MobileNav from './MobileNav/MobileNav';
 import NavLink from './NavLink/NavLink';
+import Image from 'next/image';
 
 const NavBar: React.VFC = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   const [navBackground, setNavBackground] = useState<boolean>(false);
   const navRef = useRef();
+
   useEffect(() => {
     const handleScroll = () => {
       const show = window.scrollY > 50;
@@ -26,8 +28,8 @@ const NavBar: React.VFC = () => {
 
   return (
     <nav
-      className={`fixed mt-0 flex w-full flex-wrap items-center justify-between ${
-        navBackground ? 'bg-white' : 'bg-transparent'
+      className={`fixed  flex w-full flex-wrap items-center justify-between ${
+        navBackground ? ' bg-black' : 'bg-transparent'
       } p-6 md:justify-center`}
     >
       <div className="hidden text-sm decoration-0 lg:flex">
