@@ -14,12 +14,32 @@ function MyApp({ Component, pageProps }: AppProps) {
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
         />
-        <Script id="googlegtag">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-PVWKHDT');`}
+
+        <Script id="fb-getElement">
+          {`
+            var chatbox = document.getElementById('fb-customer-chat');
+            chatbox.setAttribute("page_id", "104073542195311");
+            chatbox.setAttribute("attribution", "biz_inbox"); 
+          `}
+        </Script>
+
+        <Script id="fb-fc">
+          {`
+          window.fbAsyncInit = function() {
+            FB.init({
+              xfbml            : true,
+              version          : 'v13.0'
+            });
+          };
+
+          (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/it_IT/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+        `}
         </Script>
         <Script strategy="lazyOnload" id="gtag">
           {`
