@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import BannerCookies from '../../components/BannerCookies/BannerCookies';
 import Hero from '../../components/Hero/Hero';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -19,6 +20,9 @@ export const Home: NextPage = () => {
       </Head>
       <NavBar />
       <Hero />
+      <BannerCookies />
+      <div id="fb-root"></div>
+      <div id="fb-customer-chat" className="fb-customerchat"></div>
     </>
   );
 };
