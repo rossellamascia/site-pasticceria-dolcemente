@@ -1,4 +1,3 @@
-import { menu } from '../../../utils/variables';
 import Logo from '../../Logo/Logo';
 import NavLink from '../NavLink/NavLink';
 
@@ -16,9 +15,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ open, setOpen }) => (
       <Logo width={200} height={29} />
     </div>
     <div className="ml-4 flex flex-col text-white">
-      {menu.map(el => (
-        <NavLink key={el.id} menu={el} isOpen={open} setIsOpen={setOpen} />
-      ))}
+      <NavLink setIsOpen={setOpen} />
     </div>
   </div>
 );

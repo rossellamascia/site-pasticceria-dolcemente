@@ -27,3 +27,7 @@
   --button-padding-y: 0.5em;
   --button-padding-x: 0.75em;
 }
+
+a:link {
+  text-decoration: none;
+}
