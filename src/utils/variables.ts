@@ -1,14 +1,4 @@
-import { Menu } from '../models/Menu';
-
-export const menu: Menu[] = [
-  {
-    id: 1,
-    name: 'Home',
-    href: '/',
-  },
-  {
-    id: 2,
-    name: 'Chi siamo',
-    href: '/chi-siamo',
-  },
-];
+export const social = {
+  facebook: 'https://www.facebook.com/dolcementepasticceria',
+  instagram: 'https://www.instagram.com/dolcementepasticceria/',
+};
