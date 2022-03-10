@@ -28,8 +28,8 @@ const NavBar: React.VFC = () => {
 
   return (
     <nav
-      className={`fixed  flex w-full flex-wrap items-center justify-between ${
-        navBackground ? ' z-50 bg-black shadow-lg' : 'bg-transparent'
+      className={`fixed z-50 flex w-full flex-wrap items-center justify-between ${
+        navBackground ? ' bg-black shadow-lg' : 'bg-transparent'
       } p-6 md:justify-center`}
     >
       <div className="hidden text-sm decoration-0 lg:flex">

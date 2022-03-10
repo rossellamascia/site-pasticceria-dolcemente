@@ -1,4 +1,4 @@
-export interface GalleryData {
+export interface CardData {
   id: number;
   src: string;
   alt: string;

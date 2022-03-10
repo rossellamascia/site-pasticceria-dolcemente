@@ -1,17 +1,21 @@
 import { social } from '../../utils/variables';
+import LogoFooter from '../Logo/LogoFooter';
 
 export interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="bg-black text-center text-white">
       <div className="container px-6 pt-6">
+        <div className="my-8">
+          <LogoFooter />
+        </div>
         <div className="mb-6 flex justify-center">
           <a
             rel="noopener noreferrer"
             target="_blank"
             href={social.facebook}
             type="button"
-            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-primary hover:bg-opacity-5 focus:outline-none focus:ring-0"
           >
             <svg
               aria-hidden="true"
@@ -35,7 +39,7 @@ const Footer: React.FC<FooterProps> = () => {
             target="_blank"
             href={social.instagram}
             type="button"
-            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-primary hover:bg-opacity-5 focus:outline-none focus:ring-0"
           >
             <svg
               aria-hidden="true"
@@ -57,8 +61,11 @@ const Footer: React.FC<FooterProps> = () => {
       </div>
 
       <div className="p-4 text-center">
-        © 2022 Copyright:
-        <a className="text-whitehite" href="https://tailwind-elements.com/">
+        © 2022 Copyright:&nbsp;
+        <a
+          className="text-whitehite hover:text-primary"
+          href="https://tailwind-elements.com/"
+        >
           Rossella Mascia
         </a>
       </div>
