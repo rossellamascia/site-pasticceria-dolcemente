@@ -62,10 +62,7 @@ const Footer: React.FC<FooterProps> = () => {
 
       <div className="p-4 text-center">
         © 2022 Copyright:&nbsp;
-        <a
-          className="text-whitehite hover:text-primary"
-          href="https://tailwind-elements.com/"
-        >
+        <a className="text-whitehite hover:text-primary" href="">
           Rossella Mascia
         </a>
       </div>

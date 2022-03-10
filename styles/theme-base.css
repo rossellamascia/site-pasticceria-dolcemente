@@ -1,14 +1,14 @@
 :root {
   /* colors */
   --color-primary: #cfa069;
-  --color-primary-ligth: lighten(#cfa069, 30%);
+  --color-primary-light: #ebcf9d;
   --color-success: #4cad6e;
   --color-danger: #f2686e;
   --color-warning: #ffb830;
 
   /* colors */
   --color-primary-fg: #fff;
-  --color-primary-ligth-fg: #fff;
+  --color-primary-light-fg: #fff;
   --color-success-fg: #000;
   --color-danger-fg: #000;
   --color-warning-fg: #000;

@@ -7,7 +7,7 @@ export interface HamburgerButtonProps {
 const HamburgerButton: React.FC<HamburgerButtonProps> = ({ open, setOpen }) => {
   return (
     <div
-      className="relative z-50 flex h-8 w-8 flex-col items-center justify-between md:hidden"
+      className="relative z-50 flex h-6 w-6 flex-col items-center justify-between md:hidden"
       onClick={() => {
         setOpen(!open);
       }}

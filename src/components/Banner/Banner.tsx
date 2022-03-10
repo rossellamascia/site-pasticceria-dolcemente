@@ -8,7 +8,7 @@ const Banner: React.FC<BannerProps> = () => {
             Voi regalarti un momento di felicità?
           </h2>
 
-          <p className="ml-10 mt-5 text-sm font-light text-white">
+          <p className="ml-10 mt-2 text-lg font-light text-white">
             Puoi prenotare la tua torta o i tuoi pasticcini non rischierai di
             rimanerne senza
           </p>
@@ -16,7 +16,7 @@ const Banner: React.FC<BannerProps> = () => {
           <button className="group ml-10 mt-7 mb-8 font-semibold text-white ">
             <a
               href="tel:+39058555459"
-              className="rounded-md border-2 border-white px-3 py-2 text-white transition duration-300 ease-in-out hover:bg-primary hover:text-white"
+              className="rounded-md border-2 border-white px-3 py-2 text-white transition duration-300 ease-in-out hover:bg-black hover:text-white"
             >
               Chiama ora
             </a>
