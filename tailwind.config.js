@@ -7,7 +7,7 @@ module.exports = {
       colors: {
         primary: {
           DEFAULT: 'var(--color-primary)',
-          ligth: 'var(--color-primary-ligth)',
+          light: 'var(--color-primary-light)',
         },
         success: 'var(--color-success)',
         danger: 'var(--color-danger)',
@@ -15,7 +15,7 @@ module.exports = {
         // foreground
         'primary-fg': {
           DEFAULT: 'var(--color-primary-fg)',
-          ligth: 'var(--color-primary-ligth-fg)',
+          light: 'var(--color-primary-light-fg)',
         },
         'success-fg': 'var(--color-success-fg)',
         'danger-fg': 'var(--color-danger-fg)',
