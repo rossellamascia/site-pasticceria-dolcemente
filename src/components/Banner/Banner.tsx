@@ -22,13 +22,6 @@ const Banner: React.FC<BannerProps> = () => {
             </a>
           </button>
         </div>
-
-        {/* <div className="relative col-span-2">
-          <img
-            src="https://www.digitalocean.com/_next/static/media/cloudJourneyImage.954519ea.svg"
-            className="absolute bottom-0 right-0"
-          />
-        </div> */}
       </div>
     </div>
   );

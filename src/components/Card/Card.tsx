@@ -8,7 +8,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
   return (
     <section className="mx-0 pt-16">
       <div className="grid place-items-center p-5 lg:mx-32">
-        <h1 className="mb-16 font-bold text-black sm:text-5xl md:text-7xl">
+        <h1 className="mb-16 text-6xl font-bold text-black md:text-7xl">
           Le nostre torte
         </h1>
         <section className="grid grid-cols-1 gap-4 sm:grid-cols-3">
