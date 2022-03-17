@@ -47,7 +47,7 @@ export const Home: NextPage = () => {
         />
         <meta
           name="description"
-          content="Pasticceria e caffetteria marina di carrara in toscana, colazione, pasticcini, torte per compleanni, matrimoni, anniversari"
+          content="Pasticceria e caffetteria marina di carrara in toscana, colazione, pasticcini, torte per compleanni, matrimoni e anniversari"
         />
       </Head>
       <NavBar />

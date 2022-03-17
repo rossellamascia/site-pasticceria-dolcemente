@@ -14,7 +14,10 @@ export default function Document() {
           content="Dolcemente Pasticceria"
           key="title"
         />
-        <meta name="description" content="Pasticceria marina di carrara"></meta>
+        <meta
+          name="description"
+          content="Pasticceria e caffetteria marina di carrara in toscana, colazione, pasticcini, torte per compleanni, matrimoni e anniversari"
+        />
         <meta
           property="og:image"
           content="https://www.pasticceriadolcemente.it/images/pasticceria-dolcemente.jpeg"
