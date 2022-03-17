@@ -6,8 +6,11 @@ import MobileNav from './MobileNav/MobileNav';
 import NavLink from './NavLink/NavLink';
 import Image from 'next/image';
 import { social } from '../../utils/variables';
+export interface NavBarProps {
+  blackColor?: boolean;
+}
 
-const NavBar: React.VFC = () => {
+const NavBar: React.VFC<NavBarProps> = ({ blackColor }) => {
   const [open, setOpen] = useState<boolean>(false);
 
   const [navBackground, setNavBackground] = useState<boolean>(false);
@@ -29,7 +32,7 @@ const NavBar: React.VFC = () => {
   return (
     <nav
       className={`fixed z-50 flex w-full flex-wrap items-center justify-between ${
-        navBackground ? ' bg-black shadow-lg' : 'bg-transparent'
+        navBackground || blackColor ? ' bg-black shadow-lg' : 'bg-transparent'
       } p-6 md:justify-center`}
     >
       <div className="hidden text-sm decoration-0 lg:flex">

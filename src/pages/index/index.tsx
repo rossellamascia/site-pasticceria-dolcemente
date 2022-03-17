@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import BannerCookies from '../../components/BannerCookies/BannerCookies';
 import Card from '../../components/Card/Card';
+import ChatFacebook from '../../components/ChatFacebook/ChatFacebook';
 import Footer from '../../components/Footer/Footer';
 import GoogleMaps from '../../components/GoogleMaps/GoogleMaps';
 import Hero from '../../components/Hero/Hero';
@@ -39,20 +40,21 @@ export const Home: NextPage = () => {
     <>
       <Head>
         <title>Dolcemente Pasticceria - Home</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"
           content="Dolcemente Pasticceria - Home"
           key="title"
         />
-        <meta name="description" content="Pasticceria marina di carrara"></meta>
+        <meta
+          name="description"
+          content="Pasticceria e caffetteria marina di carrara in toscana, colazione, pasticcini, torte per compleanni, matrimoni, anniversari"
+        />
       </Head>
       <NavBar />
       <Hero />
       <Card data={cardData} />
       <Banner />
-      <div id="fb-root"></div>
-      <div id="fb-customer-chat" className="fb-customerchat"></div>
+      <ChatFacebook />
       <GoogleMaps />
       <Footer />
       {showBanner && <BannerCookies setShowBanner={setShowBanner} />}
