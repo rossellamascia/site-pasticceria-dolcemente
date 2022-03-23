@@ -1,20 +1,23 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import Banner from '../../components/Banner/Banner';
-import BannerCookies from '../../components/BannerCookies/BannerCookies';
-import Card from '../../components/Card/Card';
-import ChatFacebook from '../../components/ChatFacebook/ChatFacebook';
-import Footer from '../../components/Footer/Footer';
-import GoogleMaps from '../../components/GoogleMaps/GoogleMaps';
-import Hero from '../../components/Hero/Hero';
-import NavBar from '../../components/NavBar/NavBar';
+import Banner from '@components/Banner/Banner';
+import BannerCookies from '@components/BannerCookies/BannerCookies';
+import Card from '@components/Card/Card';
+import ChatFacebook from '@components/ChatFacebook/ChatFacebook';
+import Footer from '@components/Footer/Footer';
+import GoogleMaps from '@components/GoogleMaps/GoogleMaps';
+import Hero from '@components/Hero/Hero';
+import NavBar from '@components/NavBar/NavBar';
 import { CardData } from '../../models/CardData';
+import { getCookie } from '@/utils/index';
 
 export const Home: NextPage = () => {
   const [showBanner, setShowBanner] = useState<boolean>(true);
+  const [isCookieAccepted, setIsCookieAccepted] = useState<string>('');
+
+  useEffect(() => setIsCookieAccepted(getCookie('banner')), []);
 
   const cardData: CardData[] = [
     {
@@ -36,6 +39,7 @@ export const Home: NextPage = () => {
       title: 'Crema leggera allo yogurt e frutti rossi',
     },
   ];
+
   return (
     <>
       <Head>
@@ -57,7 +61,9 @@ export const Home: NextPage = () => {
       <ChatFacebook />
       <GoogleMaps />
       <Footer />
-      {showBanner && <BannerCookies setShowBanner={setShowBanner} />}
+      {isCookieAccepted !== 'accepted' && showBanner && (
+        <BannerCookies setShowBanner={setShowBanner} />
+      )}
     </>
   );
 };
