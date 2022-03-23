@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           `}
         </Script>
 
-        <Script id="fb-fc">
+        <Script id="fb-fc" strategy="lazyOnload">
           {`
           window.fbAsyncInit = function() {
             FB.init({
