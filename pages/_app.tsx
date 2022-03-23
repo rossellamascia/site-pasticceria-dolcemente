@@ -10,11 +10,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <GraphQLProvider>
       <RESTProvider>
-        <Script
-          strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-        />
-
         <Script id="fb-getElement">
           {`
             var chatbox = document.getElementById('fb-customer-chat');
@@ -39,15 +34,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             js.src = 'https://connect.facebook.net/it_IT/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
           }(document, 'script', 'facebook-jssdk'));
-        `}
-        </Script>
-        <Script strategy="lazyOnload" id="gtag">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
         `}
         </Script>
         <Component {...pageProps} />
