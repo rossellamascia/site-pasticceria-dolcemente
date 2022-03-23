@@ -3,22 +3,12 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 
 import Banner from '@components/Banner/Banner';
-import BannerCookies from '@components/BannerCookies/BannerCookies';
 import Card from '@components/Card/Card';
-import ChatFacebook from '@components/ChatFacebook/ChatFacebook';
-import Footer from '@components/Footer/Footer';
 import GoogleMaps from '@components/GoogleMaps/GoogleMaps';
 import Hero from '@components/Hero/Hero';
-import NavBar from '@components/NavBar/NavBar';
 import { CardData } from '../../models/CardData';
-import { getCookie } from '@/utils/index';
 
 export const Home: NextPage = () => {
-  const [showBanner, setShowBanner] = useState<boolean>(true);
-  const [isCookieAccepted, setIsCookieAccepted] = useState<string>('');
-
-  useEffect(() => setIsCookieAccepted(getCookie('banner')), []);
-
   const cardData: CardData[] = [
     {
       id: 1,
@@ -54,16 +44,10 @@ export const Home: NextPage = () => {
           content="Pasticceria e caffetteria marina di carrara in toscana, colazione, pasticcini, torte per compleanni, matrimoni e anniversari"
         />
       </Head>
-      <NavBar />
       <Hero />
       <Card data={cardData} />
       <Banner />
-      <ChatFacebook />
       <GoogleMaps />
-      <Footer />
-      {isCookieAccepted !== 'accepted' && showBanner && (
-        <BannerCookies setShowBanner={setShowBanner} />
-      )}
     </>
   );
 };

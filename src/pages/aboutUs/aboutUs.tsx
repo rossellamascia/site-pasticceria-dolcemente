@@ -1,7 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
-import ChatFacebook from '../../components/ChatFacebook/ChatFacebook';
-import NavBar from '../../components/NavBar/NavBar';
+import ChatFacebook from '@components/ChatFacebook/ChatFacebook';
 
 export const AboutUs: NextPage = () => {
   return (
@@ -16,8 +15,6 @@ export const AboutUs: NextPage = () => {
         />
         <meta name="description" content="Pasticceria marina di carrara"></meta>
       </Head>
-      <NavBar blackColor />
-      <ChatFacebook />
     </>
   );
 };
