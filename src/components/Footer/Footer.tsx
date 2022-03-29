@@ -1,4 +1,4 @@
-import { social } from '../../utils/variables';
+import { social } from '@/utils/index';
 import LogoFooter from '../Logo/LogoFooter';
 
 export interface FooterProps {}

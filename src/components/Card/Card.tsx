@@ -6,7 +6,7 @@ export interface CardProps {
 }
 const Card: React.FC<CardProps> = ({ data }) => {
   return (
-    <section className="mx-0 pt-16">
+    <section className="mx-0 pt-16" id="i-nostri-dolci">
       <div className="grid place-items-center p-5 lg:mx-32">
         <h1 className="mb-16 text-6xl font-bold text-black md:text-7xl">
           Le nostre torte

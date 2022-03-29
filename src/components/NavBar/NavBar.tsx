@@ -4,13 +4,14 @@ import HamburgerButton from './HamburgerButton/HamburgerButton';
 import Logo from '../Logo/Logo';
 import MobileNav from './MobileNav/MobileNav';
 import NavLink from './NavLink/NavLink';
-import Image from 'next/image';
-import { social } from '../../utils/variables';
+import { social } from '@/utils/index';
+import { DataMenu } from 'pages/_app';
 export interface NavBarProps {
   blackColor?: boolean;
+  data: DataMenu[][];
 }
 
-const NavBar: React.VFC<NavBarProps> = ({ blackColor }) => {
+const NavBar: React.VFC<NavBarProps> = ({ blackColor, data }) => {
   const [open, setOpen] = useState<boolean>(false);
 
   const [navBackground, setNavBackground] = useState<boolean>(false);
@@ -36,13 +37,20 @@ const NavBar: React.VFC<NavBarProps> = ({ blackColor }) => {
       } p-6 md:justify-center`}
     >
       <div className="hidden text-sm decoration-0 lg:flex">
-        <NavLink />;
+        <NavLink data={data[0]} />
       </div>
-      <div className="mr-6 flex flex-shrink-0 items-center text-white">
-        <Logo width={300} height={39} />
+      <div className="mr-6 text-white">
+        <Link href="/" passHref>
+          <a>
+            <Logo width={300} height={39} />
+          </a>
+        </Link>
+      </div>
+      <div className="hidden text-sm decoration-0 lg:flex">
+        <NavLink data={data[1]} />
       </div>
       <HamburgerButton open={open} setOpen={setOpen} />
-      <MobileNav open={open} setOpen={setOpen} />
+      <MobileNav open={open} setOpen={setOpen} data={data.flat()} />
       <div className="hidden w-full lg:flex lg:w-auto lg:items-center">
         <div className="hidden items-center justify-end lg:flex">
           <div className="mr-3">

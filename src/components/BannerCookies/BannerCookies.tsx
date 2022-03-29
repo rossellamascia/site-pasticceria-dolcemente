@@ -1,10 +1,14 @@
+import { setCookie } from '@/utils/index';
 import { Dispatch, SetStateAction } from 'react';
 
 export interface BannerCookiesProps {
   setShowBanner: Dispatch<SetStateAction<boolean>>;
 }
 const BannerCookies: React.FC<BannerCookiesProps> = ({ setShowBanner }) => {
-  const handlerClick = () => setShowBanner(false);
+  const handlerClick = () => {
+    setCookie('banner', 'accepted', 1);
+    setShowBanner(false);
+  };
   return (
     <div className="fixed bottom-0 left-0 z-50 px-4 pb-5 shadow-sm lg:px-5">
       <div className="relative rounded-xl bg-black p-5">

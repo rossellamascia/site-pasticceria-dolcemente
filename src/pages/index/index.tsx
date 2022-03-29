@@ -1,21 +1,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import Banner from '../../components/Banner/Banner';
-import BannerCookies from '../../components/BannerCookies/BannerCookies';
-import Card from '../../components/Card/Card';
-import ChatFacebook from '../../components/ChatFacebook/ChatFacebook';
-import Footer from '../../components/Footer/Footer';
-import GoogleMaps from '../../components/GoogleMaps/GoogleMaps';
-import Hero from '../../components/Hero/Hero';
-import NavBar from '../../components/NavBar/NavBar';
+import Banner from '@components/Banner/Banner';
+import Card from '@components/Card/Card';
+import GoogleMaps from '@components/GoogleMaps/GoogleMaps';
+import Hero from '@components/Hero/Hero';
 import { CardData } from '../../models/CardData';
 
 export const Home: NextPage = () => {
-  const [showBanner, setShowBanner] = useState<boolean>(true);
-
   const cardData: CardData[] = [
     {
       id: 1,
@@ -36,6 +29,7 @@ export const Home: NextPage = () => {
       title: 'Crema leggera allo yogurt e frutti rossi',
     },
   ];
+
   return (
     <>
       <Head>
@@ -50,14 +44,10 @@ export const Home: NextPage = () => {
           content="Pasticceria e caffetteria marina di carrara in toscana, colazione, pasticcini, torte per compleanni, matrimoni e anniversari"
         />
       </Head>
-      <NavBar />
       <Hero />
       <Card data={cardData} />
       <Banner />
-      <ChatFacebook />
       <GoogleMaps />
-      <Footer />
-      {showBanner && <BannerCookies setShowBanner={setShowBanner} />}
     </>
   );
 };
