@@ -3,7 +3,7 @@ import Image from 'next/image';
 export interface HeroProps {}
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <div className="h-screen w-full bg-cover bg-center bg-no-repeat">
+    <div className="relative h-screen w-full bg-cover bg-center bg-no-repeat">
       <Image
         src="/images/hero-evento.jpg"
         alt="hero"
