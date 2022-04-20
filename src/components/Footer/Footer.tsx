@@ -14,11 +14,11 @@ const Footer: React.FC<FooterProps> = () => {
             <h5 className="mb-6 text-xl font-bold">Orari apertura</h5>
             <div className="grid grid-cols-2">
               <h6 className="font-semibold">Martedì - Sabato</h6>
-              <p className="ml-10">7:00 - 19:30</p>
+              <p className="ml-10">06:00 - 19:30</p>
             </div>
             <div className="grid grid-cols-2">
               <h6 className="font-semibold">Domenica</h6>
-              <p className="ml-10">7:00 - 13:30</p>
+              <p className="ml-10">07:00 - 13:30</p>
             </div>
             <div className="grid grid-cols-2">
               <h6 className="font-semibold">Lunedì</h6>
